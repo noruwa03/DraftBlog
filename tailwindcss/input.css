@@ -12,6 +12,10 @@
   @apply  text-green-500;
 }
 
+/* .html-list-item {
+
+} */
+
 .lds-ripple {
   display: inline-block;
   position: relative;

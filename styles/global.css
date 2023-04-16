@@ -610,6 +610,10 @@ video {
   top: 1rem;
 }
 
+.top-6 {
+  top: 1.5rem;
+}
+
 .top-7 {
   top: 1.75rem;
 }
@@ -1141,6 +1145,10 @@ video {
   fill: #15803d;
 }
 
+.fill-white {
+  fill: #fff;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1513,6 +1521,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
 }
+
+/* .html-list-item {
+
+} */
 
 .lds-ripple {
   display: inline-block;
@@ -1914,8 +1926,16 @@ video {
     left: 0px;
   }
 
+  .lg\:right-16 {
+    right: 4rem;
+  }
+
   .lg\:top-0 {
     top: 0px;
+  }
+
+  .lg\:top-8 {
+    top: 2rem;
   }
 
   .lg\:order-none {

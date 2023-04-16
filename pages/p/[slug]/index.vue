@@ -91,10 +91,9 @@ fetchData();
               dataStyle: "long",
             })
           }}</span>
-          <div v-html="postDetail.content[0].blogHTML" class="mt-8"></div>
+          <div v-html="postDetail.content[0].blogHTML" class="mt-8 html-list-item"></div>
         </section>
       </div>
     </div>
   </main>
 </template>
-

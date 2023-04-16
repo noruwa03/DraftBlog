@@ -5,6 +5,7 @@ import { deletePost } from "~/store/post/deletePost";
 
 import CustomError from "~/components/modals/CustomError.vue";
 import PostDeleteSuccess from "~/components/modals/PostDeleteSuccess.vue";
+import PreviewProfileImage from "~/components/modals/PreviewProfileImage.vue";
 import Loading from "~/components/loaders/Loading.vue";
 
 definePageMeta({
@@ -41,6 +42,16 @@ const delPost = (val) => {
   delRef.loading = true;
   delRef.DELETE_POST(val);
 };
+
+const previewImage = ref(false);
+
+const previewProfileAvatar = () => {
+  previewImage.value = true;
+};
+
+const closePreviewProfileImage = () => {
+  previewImage.value = false;
+};
 </script>
 
 <template>
@@ -58,6 +69,11 @@ const delPost = (val) => {
               content="Personal blogging site created by Obaseki Noruwa"
             />
           </Head>
+          <PreviewProfileImage
+            :close="closePreviewProfileImage"
+            :photoURL="blogger.bloggerInfo[0].photoURL"
+            v-if="previewImage"
+          />
           <Loading v-if="delRef.loading" />
           <CustomError v-if="delRef.error" :message="delRef.errorMessage" />
           <PostDeleteSuccess v-if="delRef.success" />
@@ -99,6 +115,7 @@ const delPost = (val) => {
                   :src="blogger.bloggerInfo[0].photoURL"
                   :alt="blogger.bloggerInfo[0].photoName"
                   class="w-32 h-32 rounded-full object-cover"
+                  @click="previewProfileAvatar"
                 />
 
                 <img
@@ -144,22 +161,22 @@ const delPost = (val) => {
             </h2>
           </section>
           <div v-if="blogger.bloggerPost.length == 0">
-             <div class="grid place-content-center mt-16">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              class="bi bi-list-columns-reverse"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M0 .5A.5.5 0 0 1 .5 0h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 .5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10A.5.5 0 0 1 4 .5Zm-4 2A.5.5 0 0 1 .5 2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 4h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 6h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 8h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Z"
-              />
-            </svg>
-          </div>
-          <div class="text-center text-xl font-medium mt-6">No posts yet</div>
+            <div class="grid place-content-center mt-16">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="30"
+                fill="currentColor"
+                class="bi bi-list-columns-reverse"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M0 .5A.5.5 0 0 1 .5 0h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 .5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10A.5.5 0 0 1 4 .5Zm-4 2A.5.5 0 0 1 .5 2h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 4h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 6h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2A.5.5 0 0 1 .5 8h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1h-10a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5Zm-4 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5Zm4 0a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5Z"
+                />
+              </svg>
+            </div>
+            <div class="text-center text-xl font-medium mt-6">No posts yet</div>
           </div>
           <section v-else class="lg:pt-16 pt-20 pb-20 lg:px-16 sm:px-8 px-6">
             <div class="grid lg:grid-cols-8 sm:grid-cols-8 grid-cols-2 gap-8">
