@@ -28,7 +28,7 @@ const menuHandler = () => {
     >
       <ul
         v-if="auth.storedUser.uid.length > 0"
-        class="lg:mt-0 mt-16 lg:pl-0 pl-3 flex lg:flex-row flex-col lg:items-center items-start lg:space-y-0 space-y-7 lg:space-x-6 space-x-0 lg:text-base text-slate-700 font-normal font-serif w-full h-full"
+        class="lg:mt-6 mt-16 lg:pl-0 pl-3 flex lg:flex-row flex-col lg:items-center items-start lg:space-y-0 space-y-7 lg:space-x-6 space-x-0 lg:text-base text-slate-700 font-normal font-serif w-full h-full"
       >
         <li>
           <routerLink to="/create" class="px-3 py-2 hover:text-green-500"
@@ -39,7 +39,7 @@ const menuHandler = () => {
         <li>
           <routerLink
             :to="`/@${auth.storedUser.username}`"
-            class="px-3 py-2 hover:text-green-500"
+            class="px-3 py-2 hover:text-green-500 capitalize"
             >{{ auth.storedUser.username }}</routerLink
           >
         </li>
