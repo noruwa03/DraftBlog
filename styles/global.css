@@ -1522,9 +1522,63 @@ video {
   color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 
-/* .html-list-item {
+.blogHTML ol,
+ul {
+  margin: 1em;
+  padding-left: 2.5em;
+}
 
-} */
+.blogHTML ul {
+  list-style: disc;
+}
+
+.blogHTML ol {
+  list-style: decimal;
+}
+
+.blogHTML .ql-align-justify {
+  text-align: justify;
+}
+
+.blogHTML .ql-align-left {
+  text-align: start;
+}
+
+.blogHTML .ql-align-center {
+  text-align: center;
+}
+
+.blogHTML .ql-align-right {
+  text-align: end;
+}
+
+.blogHTML blockquote {
+  /* background: #f9f9f9; */
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
+.blogHTML blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+.blogHTML blockquote span {
+  display: inline;
+}
+
+.ql-syntax {
+  padding: 12px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 0.3rem;
+}
 
 .lds-ripple {
   display: inline-block;
@@ -2148,4 +2202,3 @@ video {
     line-height: 1.75rem;
   }
 }
-
