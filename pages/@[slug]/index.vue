@@ -70,14 +70,14 @@ const closePreviewProfileImage = () => {
             />
           </Head>
           <PreviewProfileImage
-            :close="closePreviewProfileImage"
+            @close="closePreviewProfileImage"
             :photoURL="blogger.bloggerInfo[0].photoURL"
             v-if="previewImage"
           />
           <Loading v-if="delRef.loading" />
           <CustomError v-if="delRef.error" :message="delRef.errorMessage" />
           <PostDeleteSuccess v-if="delRef.success" />
-          <section class="lg:pt-8 pt-6 lg:px-20 sm:px-8 px-6">
+          <section class="lg:pt-3 pt-6 lg:px-20 sm:px-8 px-6">
             <div v-if="auth.storedUser.uid.length > 0">
               <div
                 v-if="auth.storedUser.uid === blogger.bloggerInfo[0].id"
@@ -109,12 +109,12 @@ const closePreviewProfileImage = () => {
             </div>
 
             <div class="grid place-content-center">
-              <div class="w-32 h-32 rounded-full relative">
+              <div class="lg:w-32 lg:h-32 w-40 h-40 rounded-full relative">
                 <img
                   v-if="blogger.bloggerInfo[0].photoURL"
                   :src="blogger.bloggerInfo[0].photoURL"
                   :alt="blogger.bloggerInfo[0].photoName"
-                  class="w-32 h-32 rounded-full object-cover"
+                  class="lg:w-32 lg:h-32 w-40 h-40 rounded-full object-cover"
                   @click="previewProfileAvatar"
                 />
 
@@ -149,7 +149,7 @@ const closePreviewProfileImage = () => {
               </div>
             </div>
             <h1
-              class="lg:text-xl text-base font-semibold text-center text-slate-800 mt-4"
+              class="lg:text-2xl text-xl font-semibold text-center text-slate-800 mt-4"
             >
               {{ blogger.bloggerInfo[0].fullname }}
             </h1>

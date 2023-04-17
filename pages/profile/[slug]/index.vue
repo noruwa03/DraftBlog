@@ -87,7 +87,7 @@ const submitHandler = () => {
     <Error
       v-if="profileInfo.error"
       :message="profileInfo.errorMessage"
-      :close="closeError"
+      @close="closeError"
     />
 
     <div>

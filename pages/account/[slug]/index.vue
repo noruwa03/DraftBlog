@@ -82,7 +82,7 @@ const submitHandler = () => {
     />
     <ProfileUpdateSuccess
       v-if="updateInfo.success"
-      :close="closeSuccessModal"
+      @close="closeSuccessModal"
     />
 
     <div>

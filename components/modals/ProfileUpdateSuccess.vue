@@ -1,9 +1,3 @@
-<script setup lang="ts">
-const props = defineProps<{
-  close: () => void;
-}>();
-</script>
-
 <template>
   <div class="fixed top-0 left-0 h-screen w-full bg-[#000000cc] z-20">
     <div
@@ -16,7 +10,7 @@ const props = defineProps<{
         fill="currentColor"
         class="bi bi-x-circle absolute top-3 right-4"
         viewBox="0 0 16 16"
-        @click="props.close"
+        @click="$emit('close')"
       >
         <path
           d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"

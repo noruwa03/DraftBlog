@@ -81,7 +81,7 @@ const submitHandler = () => {
     <Error
       v-if="storePost.error"
       :message="storePost.errorMessage"
-      :close="closeError"
+      @close="closeError"
     />
     <UnauthorizedUser v-if="notSignedIn" />
     <section class="lg:px-20 sm:px-8 px-6">

@@ -49,7 +49,7 @@ const signUpHandler = () => {
     <Error
       v-if="signUpAuth.error"
       :message="signUpAuth.errorMessage"
-      :close="closeError"
+      @close="closeError"
     />
     <VerifyEmail
       :uuid="signUpAuth.user.uid"

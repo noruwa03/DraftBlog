@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
   photoURL: string;
-  close: () => void;
 }>();
 </script>
 
@@ -14,7 +13,7 @@ const props = defineProps<{
       fill="currentColor"
       class="bi bi-x-circle absolute lg:top-8 lg:right-16 top-6 right-6 fill-white cursor-pointer"
       viewBox="0 0 16 16"
-      @click="props.close"
+      @click="$emit('close')"
     >
       <path
         d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
@@ -26,7 +25,7 @@ const props = defineProps<{
     <div
       class="lg:w-2/5 w-4/5 fixed top-[50%] left-[50%] -translate-y-[50%] -translate-x-[50%] grid place-content-center"
     >
-      <img :src="photoURL" alt="Avatar Image" />
+      <img :src="props.photoURL" alt="Avatar Image" />
     </div>
   </div>
 </template>

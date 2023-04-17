@@ -34,7 +34,7 @@ const submitHandler = () => {
       <Meta name="description" content="DraftBlog signin page" />
     </Head>
     <Loading v-if="auth.loading" />
-    <Error v-if="auth.error" :message="auth.errorMessage" :close="closeError" />
+    <Error v-if="auth.error" :message="auth.errorMessage" @close="closeError" />
 
     <section class="lg:px-0 sm:px-8 px-6">
       <div class="grid lg:grid-cols-8 grid-cols-4">

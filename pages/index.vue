@@ -101,12 +101,12 @@ const closeError = () => {
                   class="sm:text-base text-sm text-slate-800 capitalize font-semibold mb-2"
                 >
                   By:
-                  <NuxtLink
-                    :to="`/@${allPost.blogFeed[0].username}`"
+                  <a
+                    :href="`/@${allPost.blogFeed[0].username}`"
                     class="hover:text-green-500"
                   >
                     {{ allPost.blogFeed[0].author }}
-                  </NuxtLink>
+                  </a>
                 </h2>
               </div>
               <div class="lg:col-span-2 sm:col-span-2 col-span-4 space-y-8">
@@ -150,12 +150,12 @@ const closeError = () => {
                         class="text-sm text-slate-900 capitalize font-semibold mt-2"
                       >
                         By:
-                        <NuxtLink
-                          :to="`/@${item.username}`"
+                        <a
+                          :href="`/@${item.username}`"
                           class="hover:text-green-500"
                         >
                           {{ item.author }}
-                        </NuxtLink>
+                        </a>
                       </h2>
 
                       <h3
@@ -216,12 +216,12 @@ const closeError = () => {
                       class="text-base text-slate-900 capitalize font-semibold mt-2"
                     >
                       By:
-                      <NuxtLink
-                        :to="`/@${item.username}`"
+                      <a
+                        :href="`/@${item.username}`"
                         class="hover:text-green-500"
                       >
                         {{ item.author }}
-                      </NuxtLink>
+                      </a>
                     </h2>
                     <h3
                       class="text-xs text-slate-900 capitalize font-semibold mt-2"

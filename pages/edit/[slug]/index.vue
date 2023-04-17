@@ -84,7 +84,7 @@ const submitHandler = () => {
         <Error
           v-if="storePost.error"
           :message="storePost.errorMessage"
-          :close="closeError"
+          @close="closeError"
         />
 
         <div
