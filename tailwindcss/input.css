@@ -12,6 +12,30 @@
   @apply text-green-500;
 }
 
+.blogHTML h1 {
+  font-size: 2em;
+}
+
+.blogHTML h2 {
+  font-size: 1.5em;
+}
+
+.blogHTML h3 {
+  font-size: 1.17em;
+}
+
+.blogHTML h4 {
+  font-size: 1em;
+}
+
+.blogHTML h5 {
+  font-size: 0.83em;
+}
+
+.blogHTML h6 {
+  font-size: 0.67em;
+}
+
 .blogHTML p img {
   display: block;
   margin: 0 auto;

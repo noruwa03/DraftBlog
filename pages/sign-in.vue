@@ -43,7 +43,7 @@ const submitHandler = () => {
             <img :src="SignInFlow" alt="Login Flow" class="w-full h-full" />
           </div>
         </div>
-        <div class="lg:col-span-4 col-span-4 lg:pt-32 lg:pb-0 pt-16 pb-16">
+        <div class="lg:col-span-4 col-span-4 lg:pt-32 lg:pb-0 pt-24 pb-16">
           <form @submit.prevent="submitHandler">
             <div class="lg:w-3/5 lg:mx-auto sm:w-3/5 sm:mx-auto w-5/5">
               <h1
@@ -75,7 +75,7 @@ const submitHandler = () => {
               <button
                 class="w-full bg-green-500 py-2 outline-none text-white font-serif text-sm font-bold my-6 rounded-lg"
               >
-                Sign In
+                Sign in
               </button>
 
               <div

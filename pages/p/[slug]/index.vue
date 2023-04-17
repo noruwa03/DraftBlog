@@ -83,7 +83,7 @@ fetchData();
               class=" "
             />
           </div>
-          <h1 class="lg:text-3xl text-xl font-bold text-black mb-2">
+          <h1 class="lg:text-5xl text-3xl font-bold text-black mb-2">
             {{ postDetail.content[0].blogTitle }}
           </h1>
           <span class="lg:text-sm text-xs font-bold text-black">{{
