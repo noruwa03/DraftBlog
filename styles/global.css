@@ -1141,8 +1141,8 @@ video {
   --tw-gradient-to-position:  ;
 }
 
-.fill-green-700 {
-  fill: #15803d;
+.fill-green-400 {
+  fill: #4ade80;
 }
 
 .fill-white {
@@ -1525,6 +1525,12 @@ video {
 .router-link-exact-active {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.blogHTML iframe {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .blogHTML h1 {

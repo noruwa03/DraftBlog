@@ -155,7 +155,7 @@ const submitHandler = () => {
                   width="24"
                   height="24"
                   fill="currentColor"
-                  class="bi bi-cloud-arrow-up fill-green-700"
+                  class="bi bi-cloud-arrow-up fill-green-400"
                   viewBox="0 0 16 16"
                 >
                   <path

@@ -12,6 +12,12 @@
   @apply text-green-500;
 }
 
+.blogHTML iframe {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .blogHTML h1 {
   font-size: 2em;
 }

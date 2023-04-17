@@ -7,13 +7,11 @@ import Loading from "~/components/loaders/Loading.vue";
 import { accountUpdate } from "~/store/profile/update";
 import { userAuth } from "~/store/auth/authentication";
 
-
 definePageMeta({
   layout: "custom",
 });
 
 const updateInfo = accountUpdate();
-
 
 const auth = userAuth();
 
@@ -104,8 +102,7 @@ const submitHandler = () => {
         <section class="lg:pt-20 pt-20 lg:px-16 sm:px-8 px-6 py-16">
           <div class="grid place-content-center mb-8">
             <a
-             :href="`/@${updateInfo.currentUser[0].username}`"
-             
+              :href="`/@${updateInfo.currentUser[0].username}`"
               class="px-8 py-3 border-[1px] border-green-300 text-base rounded-md text-slate-800 font-medium capitalize"
               >{{ updateInfo.currentUser[0].username }}</a
             >
@@ -119,7 +116,7 @@ const submitHandler = () => {
               </h1>
 
               <div class="grid place-content-center mb-6" v-if="img">
-                <div class="w-32 h-32 rounded-full bg-red-200 relative">
+                <div class="w-32 h-32 rounded-full relative">
                   <img
                     :src="img"
                     alt=""
@@ -170,7 +167,7 @@ const submitHandler = () => {
                     width="24"
                     height="24"
                     fill="currentColor"
-                    class="bi bi-cloud-arrow-up fill-green-700"
+                    class="bi bi-cloud-arrow-up fill-green-400"
                     viewBox="0 0 16 16"
                   >
                     <path
@@ -201,8 +198,6 @@ const submitHandler = () => {
                 placeholder=""
                 v-model="updateInfo.currentUser[0].fullname"
               />
-
-             
 
               <label for="" class="text-slate-700 text-sm">Bio</label>
               <textarea
