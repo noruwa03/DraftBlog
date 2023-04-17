@@ -30,7 +30,7 @@ const closeError = () => {
 <template>
   <main>
     <Head>
-      <Title>DraftBlog</Title>
+      <Title>DraftBlog - Blogging site created by Obaseki Noruwa</Title>
       <Meta
         name="description"
         content="Personal blogging site created by Obaseki Noruwa"

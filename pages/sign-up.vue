@@ -77,7 +77,7 @@ const signUpHandler = () => {
               >
               <input
                 type="text"
-                class="outline-none border-[1px] border-gray-100 focus:border-green-400 px-4 py-2 rounded-lg w-full mb-5 mt-2 font-serif placeholder:text-slate-500 placeholder:font-serif placeholder:font-normal placeholder:text-sm text-base text-slate-700"
+                class="outline-none border-[1px] border-gray-100 focus:border-green-400 px-4 py-2 rounded-lg w-full mb-5 mt-2 font-serif placeholder:text-slate-500 placeholder:font-serif placeholder:font-normal placeholder:text-sm lg:text-base text-sm text-slate-700"
                 placeholder="John Doe"
                 v-model="signUpDetail.fullname"
                 required
@@ -88,7 +88,7 @@ const signUpHandler = () => {
               >
               <input
                 type="email"
-                class="outline-none border-[1px] border-gray-100 focus:border-green-400 px-4 py-2 rounded-lg w-full mb-5 mt-2 font-serif placeholder:text-slate-500 placeholder:font-serif placeholder:font-normal placeholder:text-sm text-base text-slate-700"
+                class="outline-none border-[1px] border-gray-100 focus:border-green-400 px-4 py-2 rounded-lg w-full mb-5 mt-2 font-serif placeholder:text-slate-500 placeholder:font-serif placeholder:font-normal placeholder:text-sm lg:text-base text-sm text-slate-700"
                 placeholder="name@gmail.com"
                 v-model="signUpDetail.email"
                 required
@@ -98,7 +98,7 @@ const signUpHandler = () => {
               >
               <input
                 type="password"
-                class="outline-none border-[1px] border-gray-100 focus:border-green-400 px-4 py-2 rounded-lg w-full mb-4 mt-2 font-serif placeholder:text-slate-500 placeholder:font-serif placeholder:font-normal placeholder:text-sm text-base text-slate-700"
+                class="outline-none border-[1px] border-gray-100 focus:border-green-400 px-4 py-2 rounded-lg w-full mb-4 mt-2 font-serif placeholder:text-slate-500 placeholder:font-serif placeholder:font-normal placeholder:text-sm lg:text-base text-sm text-slate-700"
                 placeholder="6+ characters"
                 v-model="signUpDetail.password"
                 required

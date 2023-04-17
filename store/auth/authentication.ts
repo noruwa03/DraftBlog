@@ -1,5 +1,10 @@
 import { defineStore } from "pinia";
-import { signOut } from "firebase/auth";
+import {
+  signOut,
+  setPersistence,
+  browserLocalPersistence,
+  sendPasswordResetEmail,
+} from "firebase/auth";
 import { auth, firestore } from "~/lib/firebase";
 
 import {
@@ -15,7 +20,7 @@ export const userAuth = defineStore("auth", {
       fullname: "",
       username: "",
       uid: "",
-      email: ""
+      email: "",
     },
     user: {},
     signedInUser: [] as {}[] | any[],
@@ -23,10 +28,12 @@ export const userAuth = defineStore("auth", {
     errorMessage: "An error occured",
     loading: false,
     verifyEmailModal: false,
+    passwordReset: false,
   }),
   actions: {
     async SIGN_UP_USER(payload: any) {
       try {
+        setPersistence(auth, browserLocalPersistence);
         const createUser = await createUserWithEmailAndPassword(
           auth,
           payload.email,
@@ -109,6 +116,14 @@ export const userAuth = defineStore("auth", {
         this.loading = false;
         this.error = true;
         this.errorMessage = "Invalid credentials";
+      }
+    },
+    async SEND_PASSWORD_RESET(payload: string) {
+      try {
+        await sendPasswordResetEmail(auth, payload);
+        this.passwordReset = true;
+      } catch (error: string | any) {
+        console.log(error.message);
       }
     },
   },
