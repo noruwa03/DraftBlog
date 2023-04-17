@@ -86,7 +86,10 @@ const submitHandler = () => {
     <UnauthorizedUser v-if="notSignedIn" />
     <section class="lg:px-20 sm:px-8 px-6">
       <div class="lg:w-4/5 lg:mx-auto sm:w-3/5 sm:mx-auto w-5/5 lg:py-16 py-16">
-        <div v-show="postError" class="text-center text-red-400 text-sm font-medium mb-4">
+        <div
+          v-show="postError"
+          class="text-center text-red-400 text-sm font-medium mb-4"
+        >
           Title or body must not be empty.
         </div>
         <form @submit.prevent="submitHandler">
@@ -154,7 +157,7 @@ const submitHandler = () => {
 
           <ClientOnly>
             <QuillEditor
-
+              toolbar="full"
               theme="snow"
               v-model:content="postContent.blogHTML"
               contentType="html"

@@ -188,7 +188,7 @@ const submitHandler = () => {
 
             <ClientOnly>
               <QuillEditor
-                toolbar="essential"
+                toolbar="full"
                 theme="snow"
                 v-model:content="storePost.content[0].blogHTML"
                 contentType="html"

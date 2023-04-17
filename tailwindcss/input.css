@@ -12,6 +12,11 @@
   @apply text-green-500;
 }
 
+.blogHTML p img {
+  display: block;
+  margin: 0 auto;
+}
+
 .blogHTML ol,
 ul {
   margin: 1em;

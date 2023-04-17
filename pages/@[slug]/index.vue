@@ -250,7 +250,7 @@ const closePreviewProfileImage = () => {
 
                   <div class="px-4 mt-3">
                     <h1
-                      class="text-base text-slate-900 font-semibold capitalize"
+                      class="lg:text-base text-2xl text-slate-900 font-semibold capitalize"
                     >
                       <NuxtLink
                         :to="`/p/${item.id}`"

@@ -202,7 +202,7 @@ const closeError = () => {
 
                   <div class="px-4 mt-3">
                     <h1
-                      class="text-base text-slate-900 font-semibold capitalize"
+                      class="lg:text-base text-2xl text-slate-900 font-semibold capitalize"
                     >
                       <NuxtLink
                         :to="`/p/${item.id}`"
@@ -213,7 +213,7 @@ const closeError = () => {
                       </NuxtLink>
                     </h1>
                     <h2
-                      class="text-sm text-slate-900 capitalize font-semibold mt-2"
+                      class="text-base text-slate-900 capitalize font-semibold mt-2"
                     >
                       By:
                       <NuxtLink
@@ -224,7 +224,7 @@ const closeError = () => {
                       </NuxtLink>
                     </h2>
                     <h3
-                      class="text-xs text-slate-900 capitalize font-semibold mt-1"
+                      class="text-xs text-slate-900 capitalize font-semibold mt-2"
                     >
                       Posted on:
                       {{
