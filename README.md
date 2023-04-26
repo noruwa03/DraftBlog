@@ -1,6 +1,8 @@
-# Nuxt 3 Minimal Starter
+## What is DraftBlog?
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+DraftBlog is a personal belonging site created by Obaseki Noruwa, with frontend framework Nuxt Js, Pinia for State management, Tailwindcss for styling and Firebase for backend services.
+
+[dev.to](https://dev.to/noruwa) Here is a link to my profile on dev.to.
 
 ## Setup
 
@@ -17,26 +19,34 @@ npm install
 pnpm install
 ```
 
-## Development Server
+## Firebase Setup
 
-Start the development server on `http://localhost:3000`
+Go to firebase and create a project
+
+````bash
+# firebase config
+Copy your firebase config and paste in your lib folder for your project
+
+# env
+Paste your secrete key from firebase here, and use in your lib folder
+
+apiKey="................................."
+authDomain="................................."
+projectId="................................."
+storageBucket="................................."
+messagingSenderId="................................."
+appId="................................."
+measurementId="................................."
+
+
+## Firebase Authentication, Firestore & storage
+
+Go to firebase dashboard and enable
 
 ```bash
-npm run dev
-```
+# authentication
 
-## Production
+# firestore
 
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+# storage
+````
