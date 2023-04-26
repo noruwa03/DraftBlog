@@ -43,7 +43,7 @@ export const userAuth = defineStore("auth", {
         this.user = createUser.user;
 
         await setDoc(doc(firestore, "users", createUser.user.uid), {
-          fullname: payload.fullname,
+          fullname: payload.fullname.capitalize(),
           email: payload.email,
           username: payload.fullname
             .slice(0, payload.fullname.indexOf(" "))

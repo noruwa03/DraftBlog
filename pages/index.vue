@@ -68,20 +68,20 @@ const closeError = () => {
           >
             <div class="grid lg:grid-cols-8 sm:grid-cols-6 grid-cols-4 gap-8">
               <div class="lg:col-span-6 sm:col-span-4 col-span-4">
-                <img
-                  v-if="allPost.blogFeed[0].photoURL == ''"
-                  src="https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png"
-                  alt="Image Placeholder"
-                  class="w-full"
-                />
+                <NuxtLink :to="`/p/${allPost.blogFeed[0].id}`">
+                  <img
+                    v-if="allPost.blogFeed[0].photoURL == ''"
+                    src="https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png"
+                    alt="Image Placeholder"
+                    class="w-full" />
 
-                <img
-                  v-else
-                  :src="allPost.blogFeed[0].photoURL"
-                  :alt="allPost.blogFeed[0].blogPhoto"
-                  alt=""
-                  class="w-full"
-                />
+                  <img
+                    v-else
+                    :src="allPost.blogFeed[0].photoURL"
+                    :alt="allPost.blogFeed[0].blogPhoto"
+                    alt=""
+                    class="w-full"
+                /></NuxtLink>
 
                 <h1
                   class="lg:text-2xl text-base text-slate-700 font-semibold capitalize mt-5 mb-2"
@@ -119,19 +119,21 @@ const closeError = () => {
                     class="shadow-[0_0px_4px_-1.76px_rgba(0,0,0,0.3)] rounded-md pb-6 relative"
                   >
                     <div class="w-full h-48 overflow-hidden">
-                      <img
-                        v-if="item.photoURL == ''"
-                        src="https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png"
-                        alt="Image Placeholder"
-                        class="w-full h-full object-cover hover:scale-110 transition-all duration-150"
-                      />
+                      <NuxtLink :to="`/p/${item.id}`">
+                        <img
+                          v-if="item.photoURL == ''"
+                          src="https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png"
+                          alt="Image Placeholder"
+                          class="w-full h-full object-cover hover:scale-110 transition-all duration-150"
+                        />
 
-                      <img
-                        v-else
-                        :src="item.photoURL"
-                        :alt="item.blogPhoto"
-                        class="w-full h-full object-cover hover:scale-110 transition-all duration-150"
-                      />
+                        <img
+                          v-else
+                          :src="item.photoURL"
+                          :alt="item.blogPhoto"
+                          class="w-full h-full object-cover hover:scale-110 transition-all duration-150"
+                        />
+                      </NuxtLink>
                     </div>
 
                     <div class="px-4 mt-3">
@@ -185,19 +187,19 @@ const closeError = () => {
                   class="shadow-[0_0px_4px_-1.76px_rgba(0,0,0,0.3)] rounded-md pb-6 relative"
                 >
                   <div class="w-full h-48 overflow-hidden">
-                    <img
-                      v-if="item.photoURL == ''"
-                      src="https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png"
-                      alt="Image Placeholder"
-                      class="w-full h-full object-cover hover:scale-110 transition-all duration-150"
-                    />
+                    <NuxtLink :to="`/p/${item.id}`">
+                      <img
+                        v-if="item.photoURL == ''"
+                        src="https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png"
+                        alt="Image Placeholder"
+                        class="w-full h-full object-cover hover:scale-110 transition-all duration-150" />
 
-                    <img
-                      v-else
-                      :src="item.photoURL"
-                      :alt="item.blogPhoto"
-                      class="w-full h-full object-cover hover:scale-110 transition-all duration-150"
-                    />
+                      <img
+                        v-else
+                        :src="item.photoURL"
+                        :alt="item.blogPhoto"
+                        class="w-full h-full object-cover hover:scale-110 transition-all duration-150"
+                    /></NuxtLink>
                   </div>
 
                   <div class="px-4 mt-3">
@@ -212,9 +214,7 @@ const closeError = () => {
                         <span v-if="item.blogTitle.length >= 23"> ...</span>
                       </NuxtLink>
                     </h1>
-                    <h2
-                      class="text-base text-slate-900 capitalize font-semibold mt-2"
-                    >
+                    <h2 class="text-base text-slate-900 font-semibold mt-2">
                       By:
                       <a
                         :href="`/@${item.username}`"

@@ -189,19 +189,19 @@ const closePreviewProfileImage = () => {
                   class="shadow-[0_0px_4px_-1.76px_rgba(0,0,0,0.3)] rounded-md pb-6 relative"
                 >
                   <div class="w-full h-48 overflow-hidden">
-                    <img
-                      v-if="item.photoURL == ''"
-                      src="https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png"
-                      alt="Image Placeholder"
-                      class="w-full h-full object-cover hover:scale-110 transition-all duration-150"
-                    />
+                    <NuxtLink :to="`/p/${item.id}`">
+                      <img
+                        v-if="item.photoURL == ''"
+                        src="https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png"
+                        alt="Image Placeholder"
+                        class="w-full h-full object-cover hover:scale-110 transition-all duration-150" />
 
-                    <img
-                      v-else
-                      :src="item.photoURL"
-                      :alt="item.blogPhoto"
-                      class="w-full h-full object-cover hover:scale-110 transition-all duration-150"
-                    />
+                      <img
+                        v-else
+                        :src="item.photoURL"
+                        :alt="item.blogPhoto"
+                        class="w-full h-full object-cover hover:scale-110 transition-all duration-150"
+                    /></NuxtLink>
                   </div>
                   <div v-if="auth.storedUser.uid.length > 0">
                     <div

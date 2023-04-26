@@ -8,7 +8,7 @@
         width="28"
         height="28"
         fill="currentColor"
-        class="bi bi-x-circle absolute top-3 right-4"
+        class="bi bi-x-circle absolute top-3 right-4 z-30"
         viewBox="0 0 16 16"
         @click="$emit('close')"
       >
